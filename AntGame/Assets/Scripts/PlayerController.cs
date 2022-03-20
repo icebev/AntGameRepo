@@ -15,9 +15,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             this.rb.AddForce(Vector2.up * this.jumpForce);
+        }
+
+        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) != 0)
+        {
+            if (Input.GetAxisRaw("Horizontal") > 0)
+            {
+                this.rb.AddForce(Vector2.right * this.jumpForce * 1.2f * Time.deltaTime);
+            }
+            else
+            {
+                this.rb.AddForce(Vector2.left * this.jumpForce * 1.2f * Time.deltaTime);
+            }
+
         }
     }
 }

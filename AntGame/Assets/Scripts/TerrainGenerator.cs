@@ -12,7 +12,14 @@ public class TerrainGenerator : MonoBehaviour
     public TileBase tile;
 
     public int terrainWidth;
-    public int terrainHeight;
+    public int terrainHeight; // Also the maximum ground level
+    public int topTerrainSegmentWidth;
+    public int minimumGroundLevel;
+
+    // How much ground should be left unmodified by the cellular automata generation code
+    public int topTerrainBuffer;
+    public int cellularAutomataGroundPercentage;
+    public int mooreSmoothingCount;
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +44,11 @@ public class TerrainGenerator : MonoBehaviour
 
         this.mapArray = GenerateArray(this.terrainWidth, this.terrainHeight, true);
 
-        this.mapArray = RandomWalkTopSmoothed(this.mapArray, seed, 1, 90);
+        this.mapArray = RandomWalkTopSmoothed(this.mapArray, seed, this.topTerrainSegmentWidth, this.minimumGroundLevel);
 
-        this.mapArray = GenerateCellularAutomata(this.mapArray, 20, terrainWidth, terrainHeight, seed, 50, true);
+        this.mapArray = GenerateCellularAutomata(this.mapArray, this.topTerrainBuffer, this.terrainWidth, this.terrainHeight, seed, this.cellularAutomataGroundPercentage, true);
 
-        this.mapArray = SmoothMooreCellularAutomata(this.mapArray, 20, true, 5);
+        this.mapArray = SmoothMooreCellularAutomata(this.mapArray, this.topTerrainBuffer, true, this.mooreSmoothingCount);
 
         RenderMap(this.mapArray, this.tilemap, this.tile);
 
@@ -68,6 +75,7 @@ public class TerrainGenerator : MonoBehaviour
         return map;
     }
 
+    // Applies the map to the tilemap using the base tile (rule tile)
     public static void RenderMap(int[,] map, Tilemap tilemap, TileBase tile)
     {
         //Clear the map (ensures we dont overlap)
@@ -143,7 +151,7 @@ public class TerrainGenerator : MonoBehaviour
 
         //Initialise the map
         //int[,] map = new int[width, height];
-        // map has been modified to be an original map
+        // map has been modified to be an original map to then be further modified
 
         for (int x = 0; x < map.GetUpperBound(0); x++)
         {
