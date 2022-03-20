@@ -6,10 +6,19 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float jumpForce;
+
+    public Color color;
+
+    private Material outlineMaterial;
+    private Material regularMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
         this.rb = this.gameObject.GetComponent<Rigidbody2D>();
+        this.outlineMaterial = this.gameObject.GetComponent<SpriteRenderer>().material;
+        this.regularMaterial = new Material(Shader.Find("Universal Render Pipeline/2D/Sprite-Lit-Default"));
+
     }
 
     // Update is called once per frame
@@ -32,5 +41,36 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+        
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            // assign the material to the renderer
+            this.gameObject.GetComponent<SpriteRenderer>().material = this.regularMaterial;
+        }
+        else if (Input.GetKeyDown(KeyCode.P))
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().material = this.outlineMaterial;
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().material.color = this.color;
+        }
+        
+
+        Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);//getting cursor position
+
+        if (Mathf.Abs(cursorPosition.x - this.gameObject.transform.position.x) < 2 && Mathf.Abs(cursorPosition.y - this.gameObject.transform.position.y) < 2)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().material = this.outlineMaterial;
+
+        } 
+        else
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().material = this.regularMaterial;
+
+        }
+
     }
 }
