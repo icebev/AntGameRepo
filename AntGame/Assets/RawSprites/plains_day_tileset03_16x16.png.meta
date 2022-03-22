@@ -84,6 +84,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -592,6 +593,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      plains_day_tileset03_16x16_15: -4208982978547129571
+      plains_day_tileset03_16x16_4: -8220120508724776405
+      plains_day_tileset03_16x16_14: 9007561084697801937
+      plains_day_tileset03_16x16_1: -3836744707815189464
+      plains_day_tileset03_16x16_3: -5568959553747625371
+      plains_day_tileset03_16x16_2: -669803553268467774
+      plains_day_tileset03_16x16_12: -772266485234216259
+      plains_day_tileset03_16x16_18: 7020017612503045226
+      plains_day_tileset03_16x16_17: 794519212780838789
+      plains_day_tileset03_16x16_11: -8368823311514975388
+      plains_day_tileset03_16x16_10: 4767658705466930068
+      plains_day_tileset03_16x16_0: -8133754885750779902
+      plains_day_tileset03_16x16_8: 2449185423957736388
+      plains_day_tileset03_16x16_19: -1581573313782085617
+      plains_day_tileset03_16x16_9: 7635875235430035785
+      plains_day_tileset03_16x16_13: 8924994458790785909
+      plains_day_tileset03_16x16_16: -4488886878680279280
+      plains_day_tileset03_16x16_5: 692231496946533338
+      plains_day_tileset03_16x16_7: 7937253717381068278
+      plains_day_tileset03_16x16_6: 3434812399444600471
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
