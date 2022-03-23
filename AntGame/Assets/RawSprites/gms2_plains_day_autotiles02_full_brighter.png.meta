@@ -168,6 +168,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1264,6 +1265,55 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      gms2_plains_day_autotiles02_full_brighter_42: -5934102883279229670
+      gms2_plains_day_autotiles02_full_brighter_23: -594074018310007396
+      gms2_plains_day_autotiles02_full_brighter_34: -2999218865891727652
+      gms2_plains_day_autotiles02_full_brighter_4: -2898959784470824925
+      gms2_plains_day_autotiles02_full_brighter_22: -6899459059920229549
+      gms2_plains_day_autotiles02_full_brighter_29: 2381269781481350495
+      gms2_plains_day_autotiles02_full_brighter_8: 391723653952724808
+      gms2_plains_day_autotiles02_full_brighter_3: -938208121773139492
+      gms2_plains_day_autotiles02_full_brighter_45: 4172211335496734612
+      gms2_plains_day_autotiles02_full_brighter_15: 711189631349286013
+      gms2_plains_day_autotiles02_full_brighter_39: 3659636755287725186
+      gms2_plains_day_autotiles02_full_brighter_47: -1561353146618848503
+      gms2_plains_day_autotiles02_full_brighter_26: 5199163690250300277
+      gms2_plains_day_autotiles02_full_brighter_5: -470018675507008223
+      gms2_plains_day_autotiles02_full_brighter_17: 5168748745610002648
+      gms2_plains_day_autotiles02_full_brighter_1: 4771058048276140477
+      gms2_plains_day_autotiles02_full_brighter_28: 3341650966733698871
+      gms2_plains_day_autotiles02_full_brighter_10: 6841182507631118990
+      gms2_plains_day_autotiles02_full_brighter_46: -2098118823443801894
+      gms2_plains_day_autotiles02_full_brighter_30: 207288830420167624
+      gms2_plains_day_autotiles02_full_brighter_18: -8407434567515687735
+      gms2_plains_day_autotiles02_full_brighter_19: 8960325826612503326
+      gms2_plains_day_autotiles02_full_brighter_40: -4154409704681097108
+      gms2_plains_day_autotiles02_full_brighter_14: 6059241121371060582
+      gms2_plains_day_autotiles02_full_brighter_43: 3648895819033877538
+      gms2_plains_day_autotiles02_full_brighter_13: 2501336808978460152
+      gms2_plains_day_autotiles02_full_brighter_31: -6109001541064310360
+      gms2_plains_day_autotiles02_full_brighter_21: 3530002372328228023
+      gms2_plains_day_autotiles02_full_brighter_32: 5511681970562647270
+      gms2_plains_day_autotiles02_full_brighter_41: -4837791649298960646
+      gms2_plains_day_autotiles02_full_brighter_44: 3913815906251367463
+      gms2_plains_day_autotiles02_full_brighter_24: 1437870707363981359
+      gms2_plains_day_autotiles02_full_brighter_38: 757944299181660407
+      gms2_plains_day_autotiles02_full_brighter_27: 6678619899425647996
+      gms2_plains_day_autotiles02_full_brighter_33: 5131536416343233603
+      gms2_plains_day_autotiles02_full_brighter_2: 4144910461857937961
+      gms2_plains_day_autotiles02_full_brighter_7: 4369153528325244511
+      gms2_plains_day_autotiles02_full_brighter_0: 4640464036561275331
+      gms2_plains_day_autotiles02_full_brighter_16: -8932659981535925008
+      gms2_plains_day_autotiles02_full_brighter_20: -6536108551174470912
+      gms2_plains_day_autotiles02_full_brighter_25: 4312830377146131600
+      gms2_plains_day_autotiles02_full_brighter_35: -5544415477656837924
+      gms2_plains_day_autotiles02_full_brighter_37: 3121858017950808904
+      gms2_plains_day_autotiles02_full_brighter_36: -5484608994818700181
+      gms2_plains_day_autotiles02_full_brighter_6: 8995631656915589191
+      gms2_plains_day_autotiles02_full_brighter_12: 8420247086463841541
+      gms2_plains_day_autotiles02_full_brighter_9: 2202524029045352329
+      gms2_plains_day_autotiles02_full_brighter_11: -5416981951505792977
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
