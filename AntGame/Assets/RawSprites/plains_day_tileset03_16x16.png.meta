@@ -93,7 +93,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -150,6 +150,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -594,7 +606,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      plains_day_tileset03_16x16_15: -4208982978547129571
+      plains_day_tileset03_16x16_7: 7937253717381068278
       plains_day_tileset03_16x16_4: -8220120508724776405
       plains_day_tileset03_16x16_14: 9007561084697801937
       plains_day_tileset03_16x16_1: -3836744707815189464
@@ -612,7 +624,7 @@ TextureImporter:
       plains_day_tileset03_16x16_13: 8924994458790785909
       plains_day_tileset03_16x16_16: -4488886878680279280
       plains_day_tileset03_16x16_5: 692231496946533338
-      plains_day_tileset03_16x16_7: 7937253717381068278
+      plains_day_tileset03_16x16_15: -4208982978547129571
       plains_day_tileset03_16x16_6: 3434812399444600471
   spritePackingTag: 
   pSDRemoveMatte: 0
