@@ -23,7 +23,7 @@ public class UpdateNavMesh : MonoBehaviour
 
         if (this.timeCounter >= this.updateInterval)
         {
-            StartCoroutine(RebuildNavMesh());
+            //StartCoroutine(RebuildNavMesh());
             //this.navMeshScript.UpdateNavMesh(this.data);
             this.timeCounter = 0;
         }
@@ -34,6 +34,11 @@ public class UpdateNavMesh : MonoBehaviour
         yield return new WaitForEndOfFrame();
         this.navMeshScript.UpdateNavMesh(this.navMeshScript.navMeshData);
 
+    }
+
+    public void ManualUpdateOfNavMesh()
+    {
+        this.navMeshScript.UpdateNavMesh(this.navMeshScript.navMeshData);
     }
 
 }
