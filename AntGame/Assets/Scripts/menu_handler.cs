@@ -6,7 +6,7 @@ public class menu_handler : MonoBehaviour
 {
     public Animator MenuScroll;
 
-    private bool animationPlayed;
+    
 
 
 
@@ -22,32 +22,32 @@ public class menu_handler : MonoBehaviour
         
     }
 
-    void ScrollUp()
+    public void ScrollUp()
     {
         MenuScroll.Play("ScrollUp");
     }
 
-    void ScrollDown()
+    public void ScrollDown()
     {
         MenuScroll.Play("ScrollDown");
     }
 
-    void ScrollLeft()
+    public void ScrollLeft()
     {
         MenuScroll.Play("ScrollLeft");
     }
 
-    void ScrollRight()
+    public void ScrollRight()
     {
         MenuScroll.Play("ScrollRight");
     }
 
-    void ScrollLeftToRight()
+    public void ScrollLeftToRight()
     {
         MenuScroll.Play("ScrollLeftToRight");
     }
 
-    void ScrollRightToLeft()
+    public void ScrollRightToLeft()
     {
         MenuScroll.Play("ScrollRightToLeft");
     }

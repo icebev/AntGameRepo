@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class button_handler : MonoBehaviour
 {
     private int previousMenuState;
     private int currentMenuState;
 
-    public GameObject Title;
-    public GameObject Saves;
-    public GameObject Options;
-    public GameObject Credits;
-    
+
+    public menu_handler Title;
+    public menu_handler Saves;
+    public menu_handler Options;
+    public menu_handler Credits;
 
     enum MenuStates
     {
@@ -24,7 +26,8 @@ public class button_handler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        currentMenuState = (int)MenuStates.Title;
     }
 
     // Update is called once per frame
@@ -33,25 +36,27 @@ public class button_handler : MonoBehaviour
         
     }
 
-    void GoBack()
+    public void GoBack()
     {
         switch (currentMenuState)
         {
 
 
             case (int)MenuStates.Saves:
-                //Title.ScrollLeftToRight();
-                //Saves.ScrollLeft();
-
+                Title.ScrollRightToLeft();
+                Saves.ScrollLeft();
+                currentMenuState = (int)MenuStates.Title;
                 break;
             case (int)MenuStates.Options:
-                //Title.ScrollUp();
-                //Options.ScrollUp();
-
+                Title.ScrollUp();
+                Options.ScrollUp();
+                currentMenuState = (int)MenuStates.Title;
                 break;
             case (int)MenuStates.Credits:
-                //Title.ScrollRightToLeft();
-                //Credits.ScrollLeft();
+                
+                Title.ScrollLeftToRight();
+                Credits.ScrollRight();
+                currentMenuState = (int)MenuStates.Title;
                 break;
 
         }
@@ -59,24 +64,50 @@ public class button_handler : MonoBehaviour
 
     }
 
-    void StartGame()
+    public void StartGame()
     {
-        //Title.ScrollRight();
-        //Saves.ScrollRight();
+        switch (currentMenuState)
+        {
+            case (int)MenuStates.Title:
 
+                Title.ScrollRight();
+                Saves.ScrollRight();
+                currentMenuState = (int)MenuStates.Saves;
+                break;
+        }
     }
 
-    void OptionsMenu()
+    public void OptionsMenu()
     {
-        //Title.ScrollDown();
-        //Options.ScrollDown();
+        switch (currentMenuState)
+        {
+            case (int)MenuStates.Title:
 
+                Title.ScrollDown();
+                Options.ScrollDown();
+                currentMenuState = (int)MenuStates.Options;
+                break;
+        }
+    }
+    public void CreditsMenu()
+    {
+        switch (currentMenuState)
+        {
+            case (int)MenuStates.Title:
+                Title.ScrollLeft();
+                Credits.ScrollLeft();
+                currentMenuState = (int)MenuStates.Credits;
+                break;
+        }
     }
 
-    void CreditsMenu()
+    public void loadSave1() 
     {
-        //Title.ScrollLeft();
-        //Credits.ScrollLeft();
-
+        switch (currentMenuState)
+        {
+            case (int)MenuStates.Saves:
+                SceneManager.LoadScene(1);
+                break;
+        }
     }
 }
