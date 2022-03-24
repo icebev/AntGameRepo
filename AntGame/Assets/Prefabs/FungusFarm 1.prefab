@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   farmRadius: 5
   resourceManager: {fileID: 0}
+  workerAntTest: {fileID: 0}
 --- !u!114 &6208739471862135167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,3 +131,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   farmRadius: 0
   resourceManager: {fileID: 0}
+  workerAntTest: {fileID: 0}
