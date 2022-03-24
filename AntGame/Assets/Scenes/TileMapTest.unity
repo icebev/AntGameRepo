@@ -203,7 +203,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 0.77, y: 0.52}
+  m_Size: {x: 0.62, y: 0.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -242,7 +242,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.77, y: 0.52}
-    newSize: {x: 0.77, y: 0.52}
+    newSize: {x: 0.62, y: 0.42}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
@@ -442,7 +442,6 @@ GameObject:
   - component: {fileID: 272916575}
   - component: {fileID: 272916576}
   - component: {fileID: 272916577}
-  - component: {fileID: 272916578}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -576,18 +575,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   antPrefab: {fileID: 569421457}
   destructibleTileMap: {fileID: 1046348062}
---- !u!114 &272916578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272916571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e1df469f3842664eb7a4ca33e277930, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &386037415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1046,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 5.1, y: 5.1}
+  m_Size: {x: 5.227083, y: 5.1016865}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1263,7 +1250,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 0.62, y: 0.42}
+  m_Size: {x: 5.5465803, y: 4.3714156}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
