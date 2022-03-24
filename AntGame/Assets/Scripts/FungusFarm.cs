@@ -16,7 +16,13 @@ public class FungusFarm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.FarmFungus();
+        switch (GlobalVars.b_gamePaused)
+        {
+
+            case false:
+                this.FarmFungus();
+                break;
+        }
     }
 
     public void FarmFungus()

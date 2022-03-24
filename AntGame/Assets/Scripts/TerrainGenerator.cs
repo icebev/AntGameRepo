@@ -32,9 +32,15 @@ public class TerrainGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        switch (GlobalVars.b_gamePaused)
         {
-            this.GenerateTerrain();
+            case false:
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    this.GenerateTerrain();
+                }
+                break;
         }
     }
 

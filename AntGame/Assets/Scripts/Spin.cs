@@ -18,6 +18,12 @@ public class Spin : MonoBehaviour
     {
         //this.gameObject.transform.Rotate()
 
-        this.rogObject.transform.Rotate(0, 0, this.spinSpeed * Time.deltaTime);
+        switch (GlobalVars.b_gamePaused)
+        {
+            case false:
+
+                this.rogObject.transform.Rotate(0, 0, this.spinSpeed * Time.deltaTime);
+                break;
+        }
     }
 }

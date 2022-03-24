@@ -20,6 +20,12 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.agent.SetDestination(this.target.position);
+        switch (GlobalVars.b_gamePaused)
+        {
+
+            case false:
+                this.agent.SetDestination(this.target.position);
+                break;
+        }
     }
 }

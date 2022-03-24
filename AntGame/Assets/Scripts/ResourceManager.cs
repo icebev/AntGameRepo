@@ -16,7 +16,12 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.UIFungus.text = System.Convert.ToString(this.fungusTotal);
+        switch (GlobalVars.b_gamePaused)
+        {
+            case false:
+                this.UIFungus.text = System.Convert.ToString(this.fungusTotal);
+                break;
+        }
     }
 
     public void AddFungus(int fungusToAdd)

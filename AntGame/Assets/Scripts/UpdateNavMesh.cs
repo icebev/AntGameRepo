@@ -19,13 +19,19 @@ public class UpdateNavMesh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.timeCounter += Time.deltaTime;
-
-        if (this.timeCounter >= this.updateInterval)
+        switch (GlobalVars.b_gamePaused)
         {
-            //StartCoroutine(RebuildNavMesh());
-            //this.navMeshScript.UpdateNavMesh(this.data);
-            this.timeCounter = 0;
+            case false:
+
+                this.timeCounter += Time.deltaTime;
+
+                if (this.timeCounter >= this.updateInterval)
+                {
+                    //StartCoroutine(RebuildNavMesh());
+                    //this.navMeshScript.UpdateNavMesh(this.data);
+                    this.timeCounter = 0;
+                }
+                break;
         }
     }
 

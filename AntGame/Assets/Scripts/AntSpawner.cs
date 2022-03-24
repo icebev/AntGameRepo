@@ -17,13 +17,21 @@ public class AntSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            this.spawnPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            this.spawnPos.z = 0;
-            TerrainDestroyer.DestroySurroundingTiles(this.destructibleTileMap, this.spawnPos, 5);
-            Instantiate(this.antPrefab, this.spawnPos, Quaternion.identity);
 
+        switch (GlobalVars.b_gamePaused) {
+
+            case false:
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    this.spawnPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    this.spawnPos.z = 0;
+                    TerrainDestroyer.DestroySurroundingTiles(this.destructibleTileMap, this.spawnPos, 5);
+                    Instantiate(this.antPrefab, this.spawnPos, Quaternion.identity);
+                            
+
+                }
+                break;
         }
     }
 }
+

@@ -19,15 +19,23 @@ public class BuildingSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!this.hasClearedTiles)
+        switch (GlobalVars.b_gamePaused)
         {
-            if (this.randomiseOrientation)
-            {
-                this.gameObject.transform.Rotate(0, 0, (float)(Random.Range(0, 3) * 90));
-            }
-            TerrainDestroyer.DestroySurroundingTiles(this.destructibleTiles, this.gameObject.transform.position, this.buildingRadius);
 
-            this.hasClearedTiles = true;
+            case false:
+
+
+                if (!this.hasClearedTiles)
+                {
+                    if (this.randomiseOrientation)
+                    {
+                        this.gameObject.transform.Rotate(0, 0, (float)(Random.Range(0, 3) * 90));
+                    }
+                    TerrainDestroyer.DestroySurroundingTiles(this.destructibleTiles, this.gameObject.transform.position, this.buildingRadius);
+
+                    this.hasClearedTiles = true;
+                }
+                break;
         }
         
     }

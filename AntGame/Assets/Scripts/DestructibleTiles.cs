@@ -22,12 +22,19 @@ public class DestructibleTiles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        switch (GlobalVars.b_gamePaused)
         {
-            DestroySurroundingTiles();
-        }
 
-        this.digLocation = diggingObject.transform.position;
+            case false:
+                if (Input.GetKeyDown(KeyCode.LeftControl))
+                {
+                    DestroySurroundingTiles();
+                }
+
+                this.digLocation = diggingObject.transform.position;
+                break;
+        }
+        
     }
 
 
