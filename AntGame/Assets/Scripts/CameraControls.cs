@@ -11,6 +11,23 @@ public class CameraControls : MonoBehaviour
     public float maxCameraSize;
     public float cameraMoveSpeed;
 
+    public Vector2 GetMinCameraPos()
+    {
+        float minX = 2f + (16f / 9f) * this.playerCam.orthographicSize;
+        float minY = this.playerCam.orthographicSize;
+        Vector2 minPos = new Vector2(minX, minY);
+        return minPos;
+    }
+
+    public Vector2 GetMaxCameraPos()
+    {
+        float maxX = 198f - (16f / 9f) * this.playerCam.orthographicSize;
+        float maxY = 160f - this.playerCam.orthographicSize;
+        Vector2 maxPos = new Vector2(maxX, maxY);
+        return maxPos;
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +56,34 @@ public class CameraControls : MonoBehaviour
 
             this.playerCam.transform.position = Vector3.MoveTowards(this.playerCam.transform.position, moveTarget, this.cameraMoveSpeed * Time.deltaTime);
         }
+        CheckCameraLimits();
+    }
+
+    private void CheckCameraLimits()
+    {
+        Vector3 temp = new Vector3(this.playerCam.transform.position.x, this.playerCam.transform.position.y, this.playerCam.transform.position.z);
+        Vector2 camMax = GetMaxCameraPos();
+        Vector2 camMin = GetMinCameraPos();
+        // Limit Checks
+        if (this.playerCam.transform.position.x > camMax.x)
+        {
+            temp.x = camMax.x;
+        }
+        else if (this.playerCam.transform.position.x < camMin.x)
+        {
+            temp.x = camMin.x;
+        }
+
+        if (this.playerCam.transform.position.y > camMax.y)
+        {
+            temp.y = camMax.y;
+        }
+        else if (this.playerCam.transform.position.y < camMin.y)
+        {
+            temp.y = camMin.y;
+        }
+
+        this.playerCam.transform.position = temp;
     }
 
     //Returns 'true' if we touched or hovering on Unity UI element.
@@ -46,7 +91,6 @@ public class CameraControls : MonoBehaviour
     {
         return IsPointerOverUIElement(GetEventSystemRaycastResults());
     }
-
 
     //Returns 'true' if we touched or hovering on Unity UI element.
     private bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults)
