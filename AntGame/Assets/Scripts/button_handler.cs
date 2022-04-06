@@ -70,9 +70,10 @@ public class button_handler : MonoBehaviour
         {
             case (int)MenuStates.Title:
 
-                Title.ScrollRight();
-                Saves.ScrollRight();
-                currentMenuState = (int)MenuStates.Saves;
+                //Title.ScrollRight();
+                //Saves.ScrollRight();
+                //currentMenuState = (int)MenuStates.Saves;
+                SceneManager.LoadScene(1);
                 break;
         }
     }
